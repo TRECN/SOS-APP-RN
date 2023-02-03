@@ -4,8 +4,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import { useState ,useEffect} from 'react';
 import * as Location from 'expo-location';
 export default function App() {
-  const [lat,setLat]=useState();
-  const [long,setLong]=useState();
+  const [lat,setLat]=useState(null);
+  const [long,setLong]=useState(null);
   const latlang={latitude: lat,
     longitude: long}
     const latlang1={latitude: 23.344101,
@@ -60,12 +60,16 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     ...StyleSheet.absoluteFillObject,
-    height: 1000,
-    width: 400,
+    height: '100%',
+    width: '100%',
     justifyContent: 'flex-end',
     alignItems: 'center',
+    borderWidth:20,
+    borderColor:'black',
+    padding:20
   },
   map: {
     ...StyleSheet.absoluteFillObject,
+    
   },
 });
