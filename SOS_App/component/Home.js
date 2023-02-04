@@ -11,10 +11,6 @@ const Home = () => {
 
     const [lat, setLat] = useState(1);
     const [long, setLong] = useState(1);
-    const latlang = {
-        latitude: lat,
-        longitude: long
-    }
     const latlang1 = {
         latitude: 23.344101,
         longitude: 85.309563
@@ -32,7 +28,7 @@ const Home = () => {
 
             let location = await Location.getCurrentPositionAsync({
               enableHighAccuracy: true,
-              accuracy: Location.Accuracy.High,
+              accuracy: Location.Accuracy.Highest,
             });
             console.log(location.coords)
             setLat(location.coords.latitude)
@@ -47,8 +43,7 @@ const Home = () => {
         region={{
           latitude: lat,
           longitude: long,
-          latitudeDelta: 0.015,
-          longitudeDelta: 0.0121,
+
         }}
         style={styles.map}
       >
