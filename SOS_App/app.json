@@ -4,12 +4,12 @@
     "slug": "SOS_App",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
+
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -22,7 +22,6 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
       "config": {
@@ -30,9 +29,6 @@
             "apiKey": "AIzaSyCwSF08mJijEK4F0lTLHO-Y4MakHLMegj4"
         }
     }
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
     }
   }
 }
