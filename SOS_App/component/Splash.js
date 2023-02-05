@@ -3,11 +3,13 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import * as Location from 'expo-location';
 
+import Spinner from 'react-native-loading-spinner-overlay';
+
 
 export default function Splash({ navigation }) {
   const [lat, setLat] = useState(1);
   const [long, setLong] = useState(1);
-
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     (async () => {
@@ -25,20 +27,30 @@ export default function Splash({ navigation }) {
       setLat(location.coords.latitude)
       setLong(location.coords.longitude)
     })();
-    setTimeout(() => {
-      navigation.navigate({
-        name: 'Home',
-        params: { longitude: long, latitude: lat }
-      })
+    if (lat == 1 && long == 1)
+      setLoading(true)
+    else
+      setTimeout(() => {
+        navigation.navigate({
+          name: 'Home',
+          params: { longitude: long, latitude: lat },
+          navigationOption:{
+            headerLeft:null
+          }
+        })
 
-    }, 1000)
-  
-  }, [lat, long]);
-  
+      }, 1000)
+
+  }, [lat,long]);
+
 
   return (
     <View style={styles.container}>
-
+      <Spinner
+          visible={loading}
+          textContent={'Loading...'}
+          textStyle={styles.spinnerTextStyle}
+      />
     </View>
   )
 }
@@ -53,5 +65,8 @@ const styles = StyleSheet.create({
   btn: {
     borderWidth: 20,
     padding: 100
-  }
+  },
+  spinnerTextStyle: {
+    color: '#FFF',
+  },
 })
