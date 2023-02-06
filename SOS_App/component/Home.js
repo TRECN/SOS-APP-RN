@@ -17,7 +17,6 @@ const Home = ({route}) => {
           longitude: route.params?.longitude,
           latitudeDelta: 0.00922,
           longitudeDelta: 0.00421,
-
         }}
         style={styles.map}
       >

@@ -1,4 +1,4 @@
-import { Pressable, StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { useState, useEffect } from 'react';
 import * as Location from 'expo-location';
@@ -34,9 +34,6 @@ export default function Splash({ navigation }) {
         navigation.navigate({
           name: 'Home',
           params: { longitude: long, latitude: lat },
-          navigationOption:{
-            headerLeft:null
-          }
         })
 
       }, 1000)
