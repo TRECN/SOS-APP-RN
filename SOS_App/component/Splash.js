@@ -32,13 +32,13 @@ export default function Splash({ navigation }) {
     else
       setLoading(false);
     setTimeout(()=>{
-      if(!loading)
+      if(loading==false){
       navigation.dispatch(
         StackActions.replace('Home',{
             longitude: long, latitude: lat
       })
-      )
-    },1000)
+      )}
+    },2000)
 
 
   }, [lat,long]);
