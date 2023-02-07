@@ -1,5 +1,3 @@
-
-import { StyleSheet, Text, View } from 'react-native';
 import Home from './component/Home';
 import Splash from './component/Splash';
 import { NavigationContainer, StackRouter } from '@react-navigation/native';
