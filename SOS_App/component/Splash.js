@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import * as Location from 'expo-location';
 
 import Spinner from 'react-native-loading-spinner-overlay';
-
+import { StackActions } from '@react-navigation/native';
 
 export default function Splash({ navigation }) {
   const [lat, setLat] = useState(1);
@@ -30,13 +30,16 @@ export default function Splash({ navigation }) {
     if (lat == 1 && long == 1)
       setLoading(true)
     else
-      setTimeout(() => {
-        navigation.navigate({
-          name: 'Home',
-          params: { longitude: long, latitude: lat },
-        })
+      setLoading(false);
+    setTimeout(()=>{
+      if(!loading)
+      navigation.dispatch(
+        StackActions.replace('Home',{
+            longitude: long, latitude: lat
+      })
+      )
+    },1000)
 
-      }, 1000)
 
   }, [lat,long]);
 

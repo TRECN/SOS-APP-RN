@@ -5,7 +5,7 @@ import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 import { Marker } from 'react-native-maps'
 
 const Home = ({route}) => {
-  console.log("location : "+route.params?.latitude,route.params?.longitude)
+  console.log("location : "+route.params.latitude,route.params.longitude)
 
   return (
     <View style={styles.container}>

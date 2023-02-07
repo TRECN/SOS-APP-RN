@@ -18,6 +18,7 @@ export default function App() {
        }} />
         <stack.Screen name='Home' component={Home} options={{  
          headerShown: false,  
+         headerLeft:null,
        }} />
       </stack.Navigator>
     </NavigationContainer>
