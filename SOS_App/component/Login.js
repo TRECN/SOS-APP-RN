@@ -28,25 +28,25 @@ export default function Login({ navigation }) {
           </View>
 
         </View>
-        <View style={{display:'flex',alignItems:'center',width:'100%',height:'90%'}}>
-            <View style={{display:'flex', flexDirection:'column',marginTop:100,width:'100%',justifyContent:'space-between'}}>
-              <Text style={{fontSize:20,textTransform:'uppercase',marginRight:20,color:'red'}}>username:</Text>
-              <TextInput style={{width:'100%',fontSize:30,marginTop:20,borderBottomWidth:3,borderBottomColor:'red'}} />
-            </View>
-            <View style={{display:'flex', flexDirection:'column',marginTop:100,width:'100%',justifyContent:'space-between'}}>
-              <Text style={{fontSize:20,textTransform:'uppercase',marginRight:20,color:'red'}}>Password:</Text>
-              <TextInput style={{ width:'100%' ,fontSize:30,marginTop:20,borderBottomWidth:3,borderBottomColor:'red'}} secureTextEntry={true} />
-            </View>
-            <View style={{marginTop:70,borderWidth:3,borderRadius:50,padding:5,backgroundColor:'red',borderColor:'red'}}>
-              <TouchableOpacity onPress={() => {
-                navigation.dispatch(
-                  StackActions.replace('Splash')
-                )
-              }}>
-                <Text style={{fontSize:35,color:'white'}}>Login IN</Text>
-              </TouchableOpacity>
-            </View>
+        <View style={{ display: 'flex', alignItems: 'center', width: '100%', height: '90%' }}>
+          <View style={{ display: 'flex', flexDirection: 'column', marginTop: 100, width: '100%', justifyContent: 'space-between' }}>
+            <Text style={{ fontSize: 20, textTransform: 'uppercase', marginRight: 20, color: 'red' }}>username:</Text>
+            <TextInput style={{ width: '100%', fontSize: 30, marginTop: 20, borderBottomWidth: 3, borderBottomColor: 'red' }} />
           </View>
+          <View style={{ display: 'flex', flexDirection: 'column', marginTop: 100, width: '100%', justifyContent: 'space-between' }}>
+            <Text style={{ fontSize: 20, textTransform: 'uppercase', marginRight: 20, color: 'red' }}>Password:</Text>
+            <TextInput style={{ width: '100%', fontSize: 30, marginTop: 20, borderBottomWidth: 3, borderBottomColor: 'red' }} secureTextEntry={true} />
+          </View>
+          <View style={{ marginTop: 70, borderWidth: 3, borderRadius: 50, padding: 5, backgroundColor: 'red', borderColor: 'red' }}>
+            <TouchableOpacity onPress={() => {
+              navigation.dispatch(
+                StackActions.replace('Splash')
+              )
+            }}>
+              <Text style={{ fontSize: 35, color: 'white' }}>LOG IN</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
 
       </View>
     </View>
@@ -72,6 +72,6 @@ const styles = StyleSheet.create({
     borderWidth: 5,
     borderColor: 'red',
     borderRadius: 10,
-    backgroundColor:'#e5b0b0'
+    backgroundColor: '#e5b0b0'
   }
 })
