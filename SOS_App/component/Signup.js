@@ -5,7 +5,7 @@ export default function Signup({navigation}) {
     return (
         <View style={styles.login}>
           <View style={styles.container}>
-            <View style={{display:'flex',flexDirection:'column',height:'70%',alignItems:'flex-start',borderWidth:1}}>
+            <View style={{display:'flex',flexDirection:'column',height:'70%',alignItems:'flex-start'}}>
               <View 
                 style={{
                     display:'flex',
