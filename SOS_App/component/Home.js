@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import React from 'react'
 
+import { StackActions } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/AntDesign';
 import Icon1 from 'react-native-vector-icons/FontAwesome5';
 
@@ -8,7 +9,7 @@ import Icon1 from 'react-native-vector-icons/FontAwesome5';
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 import { Marker } from 'react-native-maps'
 
-const Home = ({ route }) => {
+const Home = ({ route,navigation }) => {
   console.log("location : " + route.params.latitude, route.params.longitude)
 
   return (
@@ -33,8 +34,14 @@ const Home = ({ route }) => {
         </Marker>
 
       </MapView>
+
+
+
       <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
-        <TouchableOpacity>
+
+        <TouchableOpacity onPress={()=>{
+          navigation.navigate('Contacts')
+        }}>
           <View style={{ padding: 40, borderRadius: 50, backgroundColor: 'red' }}>
             <Text style={{ color: 'white', textTransform: 'uppercase', fontSize: 20 }}> <Icon name='contacts' size={30} /> </Text>
           </View>
@@ -46,12 +53,16 @@ const Home = ({ route }) => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=>{
+          navigation.navigate('EditEmergency')
+        }}>
           <View style={{ padding: 40, borderRadius: 50, backgroundColor: 'red' }}>
             <Text style={{ color: 'white', textTransform: 'uppercase', fontSize: 20 }}> <Icon1 name='envelope-open-text' size={30} /></Text>
           </View>
         </TouchableOpacity>
       </View>
+
+
     </View>
   )
 }
