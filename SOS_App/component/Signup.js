@@ -11,7 +11,6 @@ export default function Signup({ navigation }) {
             style={{
               display: 'flex',
               flexDirection: 'row',
-              borderWidth: 3,
               borderRadius: 50,
               alignItems: 'center',
               justifyContent: 'center',
@@ -65,7 +64,7 @@ export default function Signup({ navigation }) {
 
 const styles = StyleSheet.create({
   login: {
-    display: 'flex',
+    flex:1,
     flexDirection: 'column',
     height: '100%',
     width: '100%',
@@ -75,8 +74,8 @@ const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
     justifyContent: 'flex-start',
-    height: '70%',
     width: '70%',
+    height:'80%',
     margin: 10,
     padding: 10,
     borderWidth: 5,

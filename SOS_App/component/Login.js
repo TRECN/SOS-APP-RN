@@ -11,19 +11,21 @@ export default function Login({ navigation }) {
             style={{
               display: 'flex',
               flexDirection: 'row',
-              borderWidth: 3,
               borderRadius: 50,
               alignItems: 'center',
               justifyContent: 'center',
-              borderColor: 'red',
-              backgroundColor: 'white'
+              margin:0,
+              padding:0,
+              backgroundColor:'white'
 
             }}>
-            <Text style={{ fontSize: 30, marginRight: 10, marginLeft: 10, color: 'red' }}>Log in</Text>
-            <TouchableOpacity style={{ backgroundColor: 'red', borderRadius: 50, padding: 10 }} onPress={() => {
+            <View style={{borderWidth:2,borderRadius:50,borderTopRightRadius:50,borderColor:'white',padding:10,backgroundColor:'white'}}>
+              <Text style={{backgroundColor:'white',borderRadius:50,fontSize:30,color:'red'}}>Log in</Text>
+            </View>
+            <TouchableOpacity style={{borderWidth:2,borderRadius:50,borderColor:'red',padding:10,backgroundColor:'red'}} onPress={() => {
               navigation.navigate('Signup')
             }}>
-              <Text style={{ color: 'white', fontSize: 30 }}>Sign Up</Text>
+              <Text style={{borderRadius:50,fontSize:30,color:'white'}}>Sign Up</Text>
             </TouchableOpacity>
           </View>
 
