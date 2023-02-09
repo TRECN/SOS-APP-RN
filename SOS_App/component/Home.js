@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View ,TouchableOpacity} from 'react-native'
 import React from 'react'
 
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
@@ -29,6 +29,23 @@ const Home = ({route}) => {
         </Marker>
 
       </MapView>
+      <View style={{display:'flex',flexDirection:'row',justifyContent:'space-between'}}>
+      <View style={{padding:40,borderRadius:50,backgroundColor:'red'}}>
+          <TouchableOpacity>
+            <Text style={{color:'white', textTransform:'uppercase',fontSize:20}}>contacts</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={{padding:40,top:-100,borderRadius:50,backgroundColor:'red'}}>
+          <TouchableOpacity>
+            <Text style={{color:'white', textTransform:'uppercase',fontSize:20}}>SOS</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={{padding:40,borderRadius:50,backgroundColor:'red'}}>
+          <TouchableOpacity>
+            <Text style={{color:'white', textTransform:'uppercase',fontSize:20}}>Emergency Text</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
     </View>
   )
 }

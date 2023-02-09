@@ -48,7 +48,7 @@ export default function Signup({ navigation }) {
             <Text style={{ fontSize: 15, textTransform: 'uppercase', marginRight: 20, color: 'red' }}>Confirm Password:</Text>
             <TextInput style={{ width: '100%', fontSize: 20, marginTop: 10, borderBottomWidth: 3, borderBottomColor: 'red' }} secureTextEntry={true} />
           </View>
-          <View style={{ marginTop: 70, borderWidth: 3, borderRadius: 50, padding: 5, backgroundColor: 'red', borderColor: 'red' }}>
+          <View style={{ marginTop: 50, borderWidth: 3, borderRadius: 50, padding: 5, backgroundColor: 'red', borderColor: 'red' }}>
             <TouchableOpacity onPress={() => {
               navigation.dispatch(
                 StackActions.replace('Login')
