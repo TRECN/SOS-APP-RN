@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Contacts() {
   return (
-    <View>
+    <View style={{display:'flex',justifyContent:'center',alignItems:'center',height:'100%'}}>
       <Text>Contacts</Text>
     </View>
   )
