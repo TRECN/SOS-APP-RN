@@ -9,7 +9,6 @@
       "image": "./assets/splash.png",
       "resizeMode": "cover",
       "backgroundColor": "#ffffff"
-
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -28,7 +27,7 @@
         "googleMaps": {
             "apiKey": "AIzaSyCwSF08mJijEK4F0lTLHO-Y4MakHLMegj4"
         }
-    }
+      }
     }
   }
 }
