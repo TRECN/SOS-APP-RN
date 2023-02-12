@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { Alert, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { Table,Row } from 'react-native-table-component'
 
@@ -16,23 +16,53 @@ export default function Contacts() {
       phone:8434622426
     }
   ]
+
+  const Edit=()=>(
+    <TouchableOpacity>
+      <View>
+        <Text>EDIT</Text>
+      </View>
+    </TouchableOpacity>
+  )
+
+  const Del=()=>(
+    <TouchableOpacity onPress={()=>{
+      Alert.alert('data deleted')
+    }}>
+      <View>
+        <Text>DELETE</Text>
+      </View>
+    </TouchableOpacity>
+  )
+
   return (
     <View style={{display:'flex',justifyContent:'center',alignItems:'center',height:'100%',borderWidth:10}}>
-      <View style={{flex:1,borderWidth:10,width:'100%',justifyContent:'center',alignItems:'center',borderColor:'red'}}>
-        <Text>
+      <View style={{flex:1,borderWidth:10,width:'100%',justifyContent:'flex-start',alignItems:'center',borderColor:'red'}}>
+        <Text style={{color:'red',fontSize:40,textTransform:'uppercase',borderBottomWidth:3,marginTop:40,borderBottomColor:'red'}}>
           Contacts
         </Text>
-        <Table borderStyle={{borderWidth:1,borderColor:'red'}}>
-          <Row data={header} widthArr={[100,150]} style={{height:50}} textStyle={{margin:10,fontSize:20}}/>
-
+        <View style={{display:'flex',flexDirection:'row',marginTop:20}}>
+        {
+          header.map((rowData,index)=>(
+            <View key={index} style={{padding:10,backgroundColor:'red',borderWidth:5,borderColor:'white'}}>
+              <Text style={{fontSize:20,textTransform:'uppercase',color:'white'}}>{rowData}</Text>
+            </View>
+          ))
+        }
+        </View>
+        <View style={{borderWidth:3,padding:10}}>
           {
-            data.map((rawData,index)=>{
-              <Row key={index} data={rawData} widthArr={[100,150]} style={{height:50}} textStyle={{margin:10,fontSize:20}}/>
-            })
-          }  
-
-          <Row data={data[0]} widthArr={[100,150]} textStyle={{margin:10}}/>
-        </Table>
+            data.map((rowData,index)=>(
+              <View style={{display:'flex',flexDirection:'row',justifyContent:'space-between'}}>
+                <Text style={{borderWidth:3,fontSize:20}}>{rowData.name}</Text>
+                <Text>{rowData.phone}</Text>
+                <Edit/>
+                <Del/>
+              </View>
+            ))
+          }
+        </View>
+        
       </View>
     </View>
   )
