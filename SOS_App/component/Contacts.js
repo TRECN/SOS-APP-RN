@@ -59,6 +59,8 @@ export default function Contacts() {
                 <Edit/>
                 <Del/>
               </View>
+
+              
             ))
           }
         </View>

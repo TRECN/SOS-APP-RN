@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function EditEmergency() {
   return (
-    <View>
+    <View style={{display:'flex'}}>
       <Text>EditEmergency</Text>
     </View>
   )
