@@ -4,7 +4,9 @@ import React from 'react'
 export default function EditEmergency() {
   return (
     <View style={{display:'flex'}}>
-      <Text>EditEmergency</Text>
+      <View>
+        <Text>Emergency Message</Text>
+      </View>
     </View>
   )
 }
