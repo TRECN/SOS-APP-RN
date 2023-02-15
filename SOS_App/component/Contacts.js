@@ -17,7 +17,23 @@ export default function Contacts() {
     }
   ]
 
+  const Edit=()=>(
+    <TouchableOpacity>
+      <View>
+        <Text>EDIT</Text>
+      </View>
+    </TouchableOpacity>
+  )
 
+  const Del=()=>(
+    <TouchableOpacity onPress={()=>{
+      Alert.alert('data deleted')
+    }}>
+      <View>
+        <Text>DELETE</Text>
+      </View>
+    </TouchableOpacity>
+  )
 
   return (
     <View style={{display:'flex',justifyContent:'center',alignItems:'center',height:'100%',borderWidth:10}}>
