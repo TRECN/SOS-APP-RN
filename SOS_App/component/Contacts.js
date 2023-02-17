@@ -51,7 +51,18 @@ export default function Contacts() {
         }
         </View>
         <View style={{borderWidth:3,padding:10}}>
-         
+          {
+            data.map((rowData,index)=>(
+              <View style={{display:'flex',flexDirection:'row',justifyContent:'space-between'}}>
+                <Text style={{borderWidth:3,fontSize:20}}>{rowData.name}</Text>
+                <Text>{rowData.phone}</Text>
+                <Edit/>
+                <Del/>
+              </View>
+
+              
+            ))
+          }
         </View>
         
       </View>
