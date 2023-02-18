@@ -41,7 +41,15 @@ export default function Contacts() {
         <Text style={{color:'red',fontSize:40,textTransform:'uppercase',borderBottomWidth:3,marginTop:40,borderBottomColor:'red'}}>
           Contacts
         </Text>
-        
+        <View style={{display:'flex',flexDirection:'row',marginTop:20}}>
+        {
+          header.map((rowData,index)=>(
+            <View key={index} style={{padding:10,backgroundColor:'red',borderWidth:5,borderColor:'white'}}>
+              <Text style={{fontSize:20,textTransform:'uppercase',color:'white'}}>{rowData}</Text>
+            </View>
+          ))
+        }
+        </View>
         <View style={{borderWidth:3,padding:10}}>
           {
             data.map((rowData,index)=>(
