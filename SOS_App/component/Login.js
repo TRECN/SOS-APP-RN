@@ -39,15 +39,7 @@ export default function Login({ navigation }) {
             <Text style={{ fontSize: 20, textTransform: 'uppercase', marginRight: 20, color: 'red' }}>Password:</Text>
             <TextInput style={{ width: '100%', fontSize: 30, marginTop: 20, borderBottomWidth: 3, borderBottomColor: 'red' }} secureTextEntry={true} />
           </View>
-          <View style={{ marginTop: 70, borderWidth: 3, borderRadius: 50, padding: 5, backgroundColor: 'red', borderColor: 'red' }}>
-            <TouchableOpacity onPress={() => {
-              navigation.dispatch(
-                StackActions.replace('Splash')
-              )
-            }}>
-              <Text style={{ fontSize: 35, color: 'white' }}>LOG IN</Text>
-            </TouchableOpacity>
-          </View>
+          
         </View>
 
       </View>
